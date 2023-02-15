@@ -74,7 +74,7 @@ def stats_analysis(data: pd.DataFrame) -> None:
     else:
       print('Alternative hypothesis rejected')
 
-    _, ax = plt.subplots()
+    fig, ax = plt.subplots()
 
     bottom = np.zeros(2)
     names = (
@@ -93,13 +93,15 @@ def stats_analysis(data: pd.DataFrame) -> None:
     ax.set_ylabel('# of applicants')
     ax.legend(loc='upper right')
 
+    fig.savefig('/outputs/acceptance_totals.png')
+
     def func(pct, allvals):
         absolute = int(np.round(pct/100.*np.sum(allvals)))
         return f"{pct:.1f}%\n({absolute:d})"
 
     pie_data = [men_accepted, women_accepted] 
 
-    _, ax2 = plt.subplots()
+    fig2, ax2 = plt.subplots()
     wedges, _, autotexts = ax2.pie(
         pie_data, 
         colors=['blue', 'pink'],
@@ -111,7 +113,7 @@ def stats_analysis(data: pd.DataFrame) -> None:
     ax2.legend(wedges, ['men', 'women'], title='Gender', loc='upper right')
     plt.setp(autotexts, size=12, weight='bold')
 
-    plt.show()
+    fig2.savefig('/outputs/acceptance_by_gender.png')
 
     return
 
