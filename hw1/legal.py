@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from typing import Tuple
 
-def stats_analysis(data: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
+def stats_analysis(data: pd.DataFrame) -> None:
 
     # two stratum, 1 == men, 0 == women
     men = data[data.Gender == 1]
