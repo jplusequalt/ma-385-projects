@@ -15,7 +15,7 @@ Alternatively you could install the dependencies yourself and ignore using docke
 To run:
 1. Pull the repo with ```git clone```
 2. Navigate to the specific project you wish to run
-3. Build the container using ```docker build <container-name> .```
+3. Build the container using ```docker build --tag <container-name> .```
 4. Based on your OS, run the corresponding command:
   - Windows 10:
 
