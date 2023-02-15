@@ -30,7 +30,3 @@ To delete the containers using Docker Desktop:
 2. Navigate to Containers
 3. Select the containers that you created while running these examples
 4. Click 'Delete'
-
-Alternatively, using the command line:
-1. Find the container id using ```docker ps```
-2. Remove the container using ```docker rm <container-id>```
