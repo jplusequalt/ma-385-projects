@@ -93,7 +93,7 @@ def stats_analysis(data: pd.DataFrame) -> None:
     ax.set_ylabel('# of applicants')
     ax.legend(loc='upper right')
 
-    fig.savefig('/outputs/acceptance_totals.png')
+    fig.savefig('./outputs/acceptance_totals.png')
 
     def func(pct, allvals):
         absolute = int(np.round(pct/100.*np.sum(allvals)))
@@ -113,13 +113,13 @@ def stats_analysis(data: pd.DataFrame) -> None:
     ax2.legend(wedges, ['men', 'women'], title='Gender', loc='upper right')
     plt.setp(autotexts, size=12, weight='bold')
 
-    fig2.savefig('/outputs/acceptance_by_gender.png')
+    fig2.savefig('./outputs/acceptance_by_gender.png')
 
     return
 
 if __name__ == '__main__':
   
-    data = pd.read_excel('data.xlsx')
+    data = pd.read_excel('data.xlsx', 'Legal')
 
     stats_analysis(data)
     
