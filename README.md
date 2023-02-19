@@ -36,11 +36,11 @@ To delete the containers using Docker Desktop:
 To run manually:
 1. Pull the repo with ```git clone```
 2. Navigate to the specific project you wish to run
-3. Create a new virtual environment using ```python -m <venv-name> .venv```
+3. Create a new virtual environment using ```python -m venv .<venv-name>```
 4. Based on your OS, start the virtual environment using one of the following commands:
   - Windows 10:
-    ```.venv\Scripts\activate.bat```
+    ```.<venv-name>\Scripts\activate.bat```
   - Linux/macOS
-    ```source .venv/bin/activate```
+    ```source .<venv-name>/bin/activate```
 5. Install the necessary Python dependencies with ```python install -r requirements.txt```
 6. Run the application with ```python main.py```
