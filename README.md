@@ -42,5 +42,5 @@ To run manually:
     ```.<venv-name>\Scripts\activate.bat```
   - Linux/macOS
     ```source .<venv-name>/bin/activate```
-5. Install the necessary Python dependencies with ```python install -r requirements.txt```
+5. Install the necessary Python dependencies with ```pip install -r requirements.txt```
 6. Run the application with ```python main.py```
